@@ -1,0 +1,193 @@
+
+/*!
+This is free and unencumbered software released into the public domain.
+
+Anyone is free to copy, modify, publish, use, compile, sell, or
+distribute this software, either in source code form or as a compiled
+binary, for any purpose, commercial or non-commercial, and by any
+means.
+
+In jurisdictions that recognize copyright laws, the author or authors
+of this software dedicate any and all copyright interest in the
+software to the public domain. We make this dedication for the benefit
+of the public at large and to the detriment of our heirs and
+successors. We intend this dedication to be an overt act of
+relinquishment in perpetuity of all present and future rights to this
+software under copyright law.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+
+For more information, please refer to <http://unlicense.org/>
+*/
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body, #app, #pages, .page, .resize-container, #gesture-area {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+a {
+  padding: 5px;
+}
+
+#app {
+  position: relative;
+}
+
+#toolbar {
+  position: absolute;
+  height: 30px;
+  width: 100%;
+  white-space: nowrap;
+  overflow-x: auto;
+  z-index: 1;
+  border-bottom: 1px solid black;
+}
+
+#pages {
+  padding: 30px 0 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.page {
+  display: none;
+}
+
+/*
+  BEGIN: part taken from http://interactjs.io/ DEMOS
+*/
+
+#drag-1, #drag-2, #grid-snap, .resize-drag, .drag-drop {
+  position: absolute;
+  width: 10em;
+  height: 10em;
+  margin: 1em;
+
+  background-color: #29e;
+  color: white;
+
+  border-radius: 1em;
+  padding: 1em;
+
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+}
+
+#drag-1, #no-drop {
+  top: 3em;
+}
+
+#drag-2, #yes-drop {
+  top: 15em;
+}
+
+.drag-drop.can-drop {
+  color: #000;
+  background-color: #4e4;
+}
+
+.dropzone {
+  background-color: #ccc;
+  border: dashed 4px transparent;
+  border-radius: 4px;
+  margin: 10px auto 30px;
+  padding: 10px;
+  width: 80%;
+  transition: background-color 0.3s;
+}
+
+.drop-active {
+  border-color: #aaa;
+}
+
+.drop-target {
+  background-color: #29e;
+  border-color: #fff;
+  border-style: solid;
+}
+
+#outer-dropzone {
+  height: 15em;
+}
+
+#inner-dropzone {
+  height: 10em;
+}
+
+#arrow {
+  width: 15em;
+  height: 15em;
+}
+
+#angle-info, .floating-text {
+  color: #666;
+  font-size: 2em;
+  position: absolute;
+}
+
+#scale-element {
+  display: block;
+  max-width: 100%;
+  margin: auto;
+}
+
+#scale-element.reset {
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+}
+
+
+
+.tap-target {
+  width: 50%;
+  height: 50%;
+  padding: 10%;
+  margin: 10% auto;
+
+  border-radius: 100%;
+
+  font-size: 1.125em;
+  text-align: center;
+  color: #fff;
+  background-color: #29e;
+
+  cursor: pointer;
+
+  transition: all 0.3s;
+}
+
+.tap-target.switch-bg {
+  background-color: #f40;
+}
+
+.tap-target.large {
+  -webkit-transform: scale(1.25);
+  transform: scale(1.25);
+}
+
+.rotate {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+
+/*
+  END: part taken from http://interactjs.io/ DEMOS
+*/
