@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="se.hemdal.interactCordovaTesting" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>interactCordovaTesting</name>
+<widget id="se.hemdal.incotest" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>InCoTest</name>
     <description>
         Testing interact.js and Apache Cordova.
     </description>
